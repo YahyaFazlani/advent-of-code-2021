@@ -14,7 +14,7 @@ int main(void)
 
   if (inputf == NULL)
   {
-    printf("Error");
+    printf("Error while opening file");
     exit(1);
   }
 
