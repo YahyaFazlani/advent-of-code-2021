@@ -7,7 +7,7 @@
 int main(void)
 {
   FILE *inputf;
-  int hrzntl_pos = 0;
+  int pos = 0;
   int depth = 0;
 
   inputf = fopen("day2/input.txt", "r");
@@ -26,7 +26,7 @@ int main(void)
 
     if (strcmp("forward", command) == 0)
     {
-      hrzntl_pos += val;
+      pos += val;
     }
     else if (strcmp("up", command) == 0)
     {
@@ -40,7 +40,7 @@ int main(void)
 
   fclose(inputf);
 
-  printf("horizontal position * depth = %d\n", hrzntl_pos * depth);
+  printf("horizontal position * depth = %d\n", pos * depth);
 
   return 0;
 }
