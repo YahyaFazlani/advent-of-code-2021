@@ -3,7 +3,6 @@ inc_count = 0
 
 with open("day1/input.txt", "r") as inputf:
   for line in inputf:
-
     depths.append(int(line.strip()))
   
 for i in range(1999):
