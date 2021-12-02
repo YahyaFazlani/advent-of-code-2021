@@ -10,4 +10,4 @@ for i in range(1999):
   if depths[i+1] > depths[i]:
     inc_count += 1
 
-print(f"Depths larger than the previous {inc_count}")
+print(f"Depths larger than the previous: {inc_count}")
