@@ -8,7 +8,7 @@ int main(void)
   FILE *inputf;
   int depths[MAX];
   int inc_count = 0;
-  int i = 0;
+  int line = 0;
 
   inputf = fopen("./day1/input.txt", "r");
 
@@ -20,22 +20,21 @@ int main(void)
 
   while (!feof(inputf))
   {
-    fscanf(inputf, "%d", &depths[i]);
-    i++;
+    fscanf(inputf, "%d", &depths[line]);
+    line++;
   }
 
-  for (int j = 0; j < MAX - 1; j++)
+  fclose(inputf);
+
+  for (int i = 0; i < MAX - 1; i++)
   {
-    printf("%d: %d\n", j, depths[j]);
-    if (depths[j + 1] > depths[j])
+    if (depths[i + 1] > depths[i])
     {
       inc_count++;
     }
   }
 
   printf("larger than previous: %d\n", inc_count);
-
-  fclose(inputf);
 
   return 0;
 }
