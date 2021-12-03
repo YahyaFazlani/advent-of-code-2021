@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 2000
+#define INPUT_LEN 2000
 
 int main(void)
 {
   FILE *inputf;
-  int depths[MAX];
+  int depths[INPUT_LEN];
   int inc_count = 0;
   int line = 0;
 
@@ -26,7 +26,7 @@ int main(void)
 
   fclose(inputf);
 
-  for (int i = 0; i < MAX - 1; i++)
+  for (int i = 0; i < INPUT_LEN - 1; i++)
   {
     if (depths[i + 1] > depths[i])
     {

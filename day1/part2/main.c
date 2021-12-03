@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 2000
+#define INPUT_LEN 2000
 
 int main(void)
 {
   FILE *inputf;
-  int depths[MAX];
+  int depths[INPUT_LEN];
   int inc_count = 0;
   int line = 0;
 
   inputf = fopen("day1/input.txt", "r");
-  
+
   if (inputf == NULL)
   {
     printf("Error while opening file");
@@ -24,7 +24,7 @@ int main(void)
     line++;
   }
 
-  for (int i = 0; i < MAX - 3; i++)
+  for (int i = 0; i < INPUT_LEN - 3; i++)
   {
     int window1 = depths[i] + depths[i + 1] + depths[i + 2];
     int window2 = depths[i + 1] + depths[i + 2] + depths[i + 3];
