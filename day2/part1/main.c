@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX 2000
+#define MAX 1000
 
 int main(void)
 {
