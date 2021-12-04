@@ -25,4 +25,5 @@ for col in range(12):
 
 gamma_rate = int(gamma_rate, base=2)
 epsilon_rate = int(epsilon_rate, base=2)
-print(gamma_rate * epsilon_rate)
+
+print(f"gamma rate * epsilon rate = {gamma_rate * epsilon_rate}")
